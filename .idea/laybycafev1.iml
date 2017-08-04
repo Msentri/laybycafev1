@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/vendor/christian-riesen/base32" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/clef/clef-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/dimabdc/php-fast-simple-html-dom-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nicolab/php-ftp-client" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpmailer/phpmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/tcdent/php-restclient" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ujjwal/currency-converter" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/christian-riesen/base32" />
+          <root url="file://$MODULE_DIR$/vendor/clef/clef-php" />
+          <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/dimabdc/php-fast-simple-html-dom-parser" />
+          <root url="file://$MODULE_DIR$/vendor/nicolab/php-ftp-client" />
+          <root url="file://$MODULE_DIR$/vendor/phpmailer/phpmailer" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/css-selector" />
+          <root url="file://$MODULE_DIR$/vendor/tcdent/php-restclient" />
+          <root url="file://$MODULE_DIR$/vendor/ujjwal/currency-converter" />
+          <root url="file://$MODULE_DIR$/../../php/pear" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/christian-riesen/base32" />
+          <root url="file://$MODULE_DIR$/vendor/clef/clef-php" />
+          <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/dimabdc/php-fast-simple-html-dom-parser" />
+          <root url="file://$MODULE_DIR$/vendor/nicolab/php-ftp-client" />
+          <root url="file://$MODULE_DIR$/vendor/phpmailer/phpmailer" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/css-selector" />
+          <root url="file://$MODULE_DIR$/vendor/tcdent/php-restclient" />
+          <root url="file://$MODULE_DIR$/vendor/ujjwal/currency-converter" />
+          <root url="file://$MODULE_DIR$/../../php/pear" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PHARS">
+        <CLASSES>
+          <root url="phar://$MODULE_DIR$/composer.phar/" />
+        </CLASSES>
+        <SOURCES>
+          <root url="phar://$MODULE_DIR$/composer.phar/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>

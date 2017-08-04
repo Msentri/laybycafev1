@@ -1,0 +1,35 @@
+
+		.lb-new-tabs.container{
+			width: 800px;
+			margin: 0 auto;
+		}
+
+
+
+		.lb-new-tabs ul.tabs{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+		.lb-new-tabs ul.tabs li{
+			background: none;
+			color: #222;
+			display: inline-block;
+			padding: 10px 15px;
+			cursor: pointer;
+		}
+
+		.lb-new-tabs ul.tabs li.current{
+			background: #FFE763 ;
+			color: #222;
+		}
+
+		.lb-new-tabs .tab-content{
+			display: none;
+			padding: 15px;
+			border: 1px solid #FFE763;
+		}
+
+		.lb-new-tabs .tab-content.current{
+			display: inherit;
+		}

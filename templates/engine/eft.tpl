@@ -1,0 +1,1 @@
+<img src="img/bank-icons.png"   usemap="#banks"  />

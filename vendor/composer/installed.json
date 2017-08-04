@@ -1,0 +1,428 @@
+[
+    {
+        "name": "tcdent/php-restclient",
+        "version": "0.1.5",
+        "version_normalized": "0.1.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/tcdent/php-restclient.git",
+            "reference": "5e9a2dd89f11cd9d9262cf889922fd9d13abda7b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/tcdent/php-restclient/zipball/5e9a2dd89f11cd9d9262cf889922fd9d13abda7b",
+            "reference": "5e9a2dd89f11cd9d9262cf889922fd9d13abda7b",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "ext-json": "*",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "php": ">=5.5.7",
+            "phpunit/phpunit": ">=4.5"
+        },
+        "time": "2016-05-19 16:57:42",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "restclient.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Travis Dent",
+                "email": "tcdent@gmail.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "A generic REST API client for PHP",
+        "homepage": "http://github.com/tcdent/php-restclient",
+        "keywords": [
+            "api",
+            "client",
+            "curl",
+            "json",
+            "rest",
+            "xml"
+        ]
+    },
+    {
+        "name": "dimabdc/php-fast-simple-html-dom-parser",
+        "version": "1.1",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/dimabdc/PHP-Fast-Simple-HTML-DOM-Parser.git",
+            "reference": "9a3b6e45553c6a246f32c6317568d3d6e0548c6f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/dimabdc/PHP-Fast-Simple-HTML-DOM-Parser/zipball/9a3b6e45553c6a246f32c6317568d3d6e0548c6f",
+            "reference": "9a3b6e45553c6a246f32c6317568d3d6e0548c6f",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4",
+            "symfony/css-selector": "*"
+        },
+        "require-dev": {
+            "phpunit/phpunit": ">=4.8",
+            "satooshi/php-coveralls": "~0.6.0"
+        },
+        "time": "2016-02-14 08:53:08",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "FastSimpleHTMLDom\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "dimabdc",
+                "email": "support@titor.ru",
+                "homepage": "http://github.com/dimabdc"
+            }
+        ],
+        "description": "PHP Fast Simple HTML DOM parser.",
+        "keywords": [
+            "html",
+            "parse",
+            "parser"
+        ]
+    },
+    {
+        "name": "phpmailer/phpmailer",
+        "version": "v5.2.22",
+        "version_normalized": "5.2.22.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PHPMailer/PHPMailer.git",
+            "reference": "b18cb98131bd83103ccb26a888fdfe3177b8a663"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/b18cb98131bd83103ccb26a888fdfe3177b8a663",
+            "reference": "b18cb98131bd83103ccb26a888fdfe3177b8a663",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.0.0"
+        },
+        "require-dev": {
+            "phpdocumentor/phpdocumentor": "*",
+            "phpunit/phpunit": "4.7.*"
+        },
+        "suggest": {
+            "league/oauth2-google": "Needed for Google XOAUTH2 authentication"
+        },
+        "time": "2017-01-09 09:33:47",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "class.phpmailer.php",
+                "class.phpmaileroauth.php",
+                "class.phpmaileroauthgoogle.php",
+                "class.smtp.php",
+                "class.pop3.php",
+                "extras/EasyPeasyICS.php",
+                "extras/ntlm_sasl_client.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1"
+        ],
+        "authors": [
+            {
+                "name": "Jim Jagielski",
+                "email": "jimjag@gmail.com"
+            },
+            {
+                "name": "Marcus Bointon",
+                "email": "phpmailer@synchromedia.co.uk"
+            },
+            {
+                "name": "Andy Prevost",
+                "email": "codeworxtech@users.sourceforge.net"
+            },
+            {
+                "name": "Brent R. Matzelle"
+            }
+        ],
+        "description": "PHPMailer is a full-featured email creation and transfer class for PHP"
+    },
+    {
+        "name": "symfony/css-selector",
+        "version": "v3.2.2",
+        "version_normalized": "3.2.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/css-selector.git",
+            "reference": "f0e628f04fc055c934b3211cfabdb1c59eefbfaa"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/css-selector/zipball/f0e628f04fc055c934b3211cfabdb1c59eefbfaa",
+            "reference": "f0e628f04fc055c934b3211cfabdb1c59eefbfaa",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.9"
+        },
+        "time": "2017-01-02 20:32:22",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.2-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\CssSelector\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jean-François Simon",
+                "email": "jeanfrancois.simon@sensiolabs.com"
+            },
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony CssSelector Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "nicolab/php-ftp-client",
+        "version": "v1.4.1",
+        "version_normalized": "1.4.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Nicolab/php-ftp-client.git",
+            "reference": "0e0c7666bdc3fb9fc9e63b065c84979588101708"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Nicolab/php-ftp-client/zipball/0e0c7666bdc3fb9fc9e63b065c84979588101708",
+            "reference": "0e0c7666bdc3fb9fc9e63b065c84979588101708",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4"
+        },
+        "time": "2017-01-20 06:44:54",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "FtpClient": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Tallefourtane",
+                "email": "dev@nicolab.net",
+                "homepage": "http://nicolab.net"
+            }
+        ],
+        "description": "A flexible FTP and SSL-FTP client for PHP. This lib provides helpers easy to use to manage the remote files.",
+        "homepage": "https://github.com/Nicolab/php-ftp-client",
+        "keywords": [
+            "file",
+            "ftp",
+            "helper",
+            "lib",
+            "server",
+            "sftp",
+            "ssl",
+            "ssl-ftp"
+        ]
+    },
+    {
+        "name": "clef/clef-php",
+        "version": "v1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/clef/clef-php.git",
+            "reference": "11f6e2f409cfc8a5b9b365f5460d20e969b1719c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/clef/clef-php/zipball/11f6e2f409cfc8a5b9b365f5460d20e969b1719c",
+            "reference": "11f6e2f409cfc8a5b9b365f5460d20e969b1719c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0",
+            "satooshi/php-coveralls": "~0.6.1",
+            "squizlabs/php_codesniffer": "~2.0"
+        },
+        "time": "2015-07-15 01:32:32",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Clef\\": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Clef and contributors",
+                "homepage": "https://github.com/clef/clef-php/contributors"
+            }
+        ],
+        "description": "Clef PHP Library",
+        "homepage": "https://getclef.com.com/",
+        "keywords": [
+            "api",
+            "clef",
+            "two factor"
+        ]
+    },
+    {
+        "name": "ujjwal/currency-converter",
+        "version": "2.2.1",
+        "version_normalized": "2.2.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ojhaujjwal/currency-converter-php.git",
+            "reference": "67b4091f70b485dd07fb974850f291061bff61e1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ojhaujjwal/currency-converter-php/zipball/67b4091f70b485dd07fb974850f291061bff61e1",
+            "reference": "67b4091f70b485dd07fb974850f291061bff61e1",
+            "shasum": ""
+        },
+        "require-dev": {
+            "ext-curl": "*",
+            "phpunit/phpunit": "4.*",
+            "zendframework/zend-cache": "2.*"
+        },
+        "suggest": {
+            "ext-curl": "Using the rate provider for gettting the rate from yahoo using curl extension",
+            "zendframework/zend-cache": "To use Zend Cache component for caching"
+        },
+        "time": "2015-03-21 05:09:03",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "CurrencyConverter\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "ojhaujjwal",
+                "email": "bring2uo@gmail.com"
+            }
+        ],
+        "description": "Currency Converter Class with features of caching and identifying currency from country Code",
+        "keywords": [
+            "converter",
+            "currency",
+            "currency-converter",
+            "exchange-rates",
+            "money"
+        ]
+    },
+    {
+        "name": "christian-riesen/base32",
+        "version": "1.3.1",
+        "version_normalized": "1.3.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ChristianRiesen/base32.git",
+            "reference": "0a31e50c0fa9b1692d077c86ac188eecdcbaf7fa"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ChristianRiesen/base32/zipball/0a31e50c0fa9b1692d077c86ac188eecdcbaf7fa",
+            "reference": "0a31e50c0fa9b1692d077c86ac188eecdcbaf7fa",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.*",
+            "satooshi/php-coveralls": "0.*"
+        },
+        "time": "2016-05-05 11:49:03",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Base32\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Christian Riesen",
+                "email": "chris.riesen@gmail.com",
+                "homepage": "http://christianriesen.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Base32 encoder/decoder according to RFC 4648",
+        "homepage": "https://github.com/ChristianRiesen/base32",
+        "keywords": [
+            "base32",
+            "decode",
+            "encode",
+            "rfc4648"
+        ]
+    }
+]

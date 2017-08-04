@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="C:\xampp\php\PEAR" />
+      <path value="C:\xampp\htdocs\wordpress" />
+      <path value="$PROJECT_DIR$/vendor/clef/clef-php" />
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/vendor/nicolab/php-ftp-client" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/tcdent/php-restclient" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/dimabdc/php-fast-simple-html-dom-parser" />
+      <path value="$PROJECT_DIR$/vendor/ujjwal/currency-converter" />
+      <path value="$PROJECT_DIR$/vendor/christian-riesen/base32" />
+    </include_path>
+  </component>
+</project>

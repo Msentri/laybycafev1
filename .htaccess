@@ -1,0 +1,82 @@
+Options -Indexes
+<FilesMatch "\.(xml|csv|txt|ini)$">
+Deny from all
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+Options +FollowSymlinks
+RewriteEngine on
+RewriteCond %{SERVER_PORT} 80
+
+DirectoryIndex index.html index.htm index.php test.php
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+#RewriteRule ^([a-z]+)\/?$ $1.php [NC]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
+#RewriteRule ^([a-z]+)\/?$ $1.html [NC]
+
+RewriteCond %{HTTP_USER_AGENT} ^BackWeb [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^Bandit [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^BatchFTP [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^BecomeBot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [NC,OR]
+# etc..
+RewriteCond %{HTTP_USER_AGENT} ^Net\ Vampire [NC]
+RewriteRule . abuse.txt [L]
+RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,NC,L]
+
+# protect against DOS attacks by limiting file upload size
+LimitRequestBody 10240000
+
+RewriteCond %{THE_REQUEST} ^.+?\ [^?]+\.php[?\ ]
+RewriteRule \.jsp$ - [F]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{THE_REQUEST} (.*)\.php
+RewriteRule ^(.*)\.json $1.json [R=301,L]
+
+RewriteCond %{THE_REQUEST} (.*)\.html
+RewriteRule ^(.*)\.html $1.php [L]
+RewriteCond %{THE_REQUEST} (.*)\.json
+RewriteRule ^(.*)\.json $1.php [L]
+RewriteCond %{THE_REQUEST} (.*)\.jsp
+RewriteRule ^(.*)\.jsp $1.php [L]
+
+Options +MultiViews
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+## hide .php extension
+# To externally redirect /dir/foo.php to /dir/foo
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+RewriteRule ^ %1 [R,L,NC]
+
+## To internally redirect /dir/foo to /dir/foo.php
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^ %{REQUEST_URI}.php [L]
+
+## hide .php extension
+# To externally redirect /dir/foo.php to /dir/foo
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+RewriteRule ^ %1 [R,L,NC]
+
+## To internally redirect /dir/foo to /dir/foo.php
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^ %{REQUEST_URI}.html [L]
+
+</IfModule>
+

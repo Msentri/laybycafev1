@@ -1,0 +1,39 @@
+.lb-modal{
+    text-align: left !important;
+    max-width: 60%;
+}
+.lb-panel{
+    padding: 20px;
+    border-color: #ffc400;
+}
+.lb-panel-heading{
+    background-color: #ffc400 !important;
+    color: #fff !important;
+    text-transform: uppercase !important;
+}
+.lb-panel-col {
+    padding-left: 0px;
+    border-color: #ffc400;
+    color: #fff;
+}
+.lb-label-error{
+    text-transform: uppercase;
+}
+.lb-new-tabs .tab-content{
+    margin-top: 0px !important;
+}
+.lb-new-tabs{
+    margin-left: -28px !important;
+    width: 107% !important;
+}
+.lb-modal-footer{
+    margin-top: 60px;
+}
+
+.lb-modal-footer li{
+    list-style: square !important;
+}
+
+.lb-modal-footer .alert{
+    padding: 30px !important;
+}

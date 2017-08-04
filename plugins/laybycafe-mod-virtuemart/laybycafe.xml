@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="3.0" type="plugin" group="vmpayment"  method="upgrade">
+
+    <name>VM Payment - LaybyCafe</name>
+    <creationDate>8 July 2014</creationDate>
+    <author>LaybyCafe (Pty) Ltd</author>
+    <authorUrl>http://www.laybycafe.co.za</authorUrl>
+    <copyright>Copyright (C) 2014 LaybyCafe. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>3.0</version>
+    <description><![CDATA[<a href="http://www.laybycafe.co.za" target="_blank">LaybyCafe</a> ]]></description>
+    
+    <files>
+        <filename plugin="laybycafe">laybycafe.php</filename>
+        <filename>laybycafe_common.inc</filename>
+        <filename>index.html</filename>
+        <folder>language</folder>
+    </files>
+
+    <media folder="images" destination="../images/stories/virtuemart/payment">
+        <filename>laybycafe.png</filename>
+        <filename>laybycafelogo.gif</filename>
+    </media>
+  	<vmconfig>
+  		<fields name="params">
+		  		<fieldset name="basic" addpath="/plugins/vmpayment/laybycafe/laybycafe/fields">
+
+                <field type="spacer" default="VMPAYMENT_LAYBYCAFE_FIELDS" level="level1" />
+
+				<field type="text" name="laybycafe_merchant_id"  size="50" label="LaybyCafe Merchant ID:"/>
+				<field type="text" name="laybycafe_merchant_key"  size="50" label="LaybyCafe Merchant Key:" />
+
+				<field	name="payment_logos" type="vmfiles" label="Logos:" description="VMPAYMENT_LAYBYCAFE_LOGOS_DESC"
+			             	directory="/images/stories/virtuemart/payment"
+			             	default="default" hide_default="1" hide_none="1"
+			             	stripext="0"  exclude="^_" />
+
+                <field   type="spacer" default="VMPAYMENT_LAYBYCAFE_SANDBOX_FIELDS" level="level1" />
+
+				<field name="sandbox" type="radio" default="1" label="sandbox">
+				    <option value="0">COM_VIRTUEMART_NO</option>
+				    <option value="1">COM_VIRTUEMART_YES</option>
+				</field>
+
+				<field   type="spacer" default="VMPAYMENT_LAYBYCAFE_VIRTUEMART_FIELDS" level="level1" />
+
+				<field name="status_pending" type="vmorderstate" scope="com_virtuemart" default="P" label="Pending"/>
+				<field name="status_success" type="vmorderstate" scope="com_virtuemart" default="C" label="Success" />
+				<field name="status_canceled" type="vmorderstate" scope="com_virtuemart" default="X" label="Failed"  />
+				<field name="countries" type="vmcountries"  scope="com_virtuemart" default="" label="Countries" />
+
+				<field name="min_amount" type="text"  label="Min Amount" />
+				<field name="max_amount" type="text"  label="Max Amount" />
+				<field name="payment_tax_id" type="vmtaxes" scope="com_virtuemart"  label="TAX" />
+		    </fieldset>
+		</fields>
+  	</vmconfig>
+
+
+</extension>

@@ -1,0 +1,56 @@
+<?php
+$_order = new Mage_Sales_Model_Order(); //object to get all order information
+$orderId = Mage::getSingleton('checkout/session')->getLastRealOrderId();
+$store_name = Mage::app()->getStore()->getFrontendName();
+$_order->loadByIncrementId($orderId);
+$_cgiurl = $this->helper("laybycafe")->getPaymentmethodLaybycafeurl();
+$currency_code = Mage::app()->getStore()->getCurrentCurrencyCode();
+
+$_merchant_id = $this->helper("laybycafe")->getPaymentmethodLaybycafeMerchantID();
+$_merchant_key = $this->helper("laybycafe")->getPaymentmethodLaybycafeMerchantKey();
+$_is_test = $this->helper("laybycafe")->getPaymentmethodLaybycafeIsTest();
+
+
+function getPaidSuccessUrl()
+	{
+		return Mage::getUrl( 'laybycafe/paygateway/success', array( '_secure' => true ) );
+	}
+	
+function getCancelUrl()
+	{
+		return Mage::getUrl( 'laybycafe/paygateway/cancel', array( '_secure' => true ) );
+	}
+
+
+$success_url = urlencode(getPaidSuccessUrl());
+$cancel_url = urlencode(getCancelUrl());
+
+$parts = explode(" ", $_order->getCustomerName());
+$lastname = array_pop($parts);
+$firstname = implode(" ", $parts);
+
+
+if (number_format($_order->getBaseGrandTotal() , 2, '.','') > 550) {
+?>
+<form name="mygatewayform" method="post" action="http://app.laybycafe.com/process">
+    <input type="hidden" name="m_payment_id"    value="<?php echo $orderId; ?>">
+    <input type="hidden" name="first_name"    value="<?php echo $firstname; ?>">
+    <input type="hidden" name="last_name"    value="<?php echo $lastname; ?>">
+    <input type="hidden" name="email"    value="<?php echo $_order->getCustomerEmail(); ?>">
+    <input type="hidden" name="item_description"    value="<?php echo $store_name." - ".$orderId; ?>">
+    <input type="hidden" name="merchant_id"    value="<?php echo $_merchant_id; ?>">
+    <input type="hidden" name="merchant_key"    value="<?php echo $_merchant_key; ?>">
+    <input type="hidden" name="item_name"    value="<?php echo $orderId; ?>">
+    <input type="hidden" name="amount" value="<?php echo number_format($_order->getBaseGrandTotal() , 2, '.',''); ?>">
+    <input type="hidden" name="return_url"    value="<?php echo $success_url; ?>">
+    <input type="hidden" name="cancel_url"    value="<?php echo $cancel_url; ?>">
+    <input type="hidden" name="notify_url"    value="<?php echo $success_url; ?>">
+    <input type="hidden" name="user_agent"    value="Margento-x1.9xx">
+</form>
+<script type="text/javascript">
+document.mygatewayform.submit();
+</script>
+<?php } else { ?>
+<p align="center"><strong>PLEASE NOTE:</strong> A mininum spending of R550 is required to proceed with a lay-by. Add more items to your cart or select an alternative payment method.</p>
+<script>setTimeout(function(){window.location.href='<?php echo urldecode($cancel_url); ?>'},3000);</script>
+<?php }  ?>

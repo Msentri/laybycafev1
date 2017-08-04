@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <LBC_Laybycafe>
+            <version>0.1.4</version>
+        </LBC_Laybycafe>
+    </modules>
+
+	  <frontend>
+        <routers>
+            <laybycafe>
+                <use>standard</use>
+                <args>
+                    <module>LBC_Laybycafe</module>
+                    <frontName>laybycafe</frontName>
+                </args>
+            </laybycafe>
+        </routers>
+    </frontend>
+	
+  
+  <adminhtml>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				
+				<admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <laybycafe>
+                                        <title>Laybycafe</title>
+                                    </laybycafe>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+			</resources>
+		</acl>
+		
+    </adminhtml>   
+    <global>
+	   <models>
+	    <laybycafe>
+		  <class>LBC_Laybycafe_Model</class>
+	    </laybycafe>
+	   </models>
+	   <blocks>
+	      <laybycafe>
+		  	<class>LBC_Laybycafe_Block</class>
+		  </laybycafe>
+	   </blocks>
+        
+		<helpers>
+		<laybycafe>
+		<class>LBC_Laybycafe_Helper</class>
+		</laybycafe>
+		</helpers>
+	
+    </global>
+	<default>
+	
+    <payment>
+      <laybycafe>
+        <model>laybycafe/standard</model>
+        <active>1</active>
+	    <title>Lay-by your order (Layby Cafe)</title>
+		<is_test>no</is_test>
+        <payment_action>redirect</payment_action>
+        <sort_order>0</sort_order>
+      </laybycafe>
+    </payment>
+  </default>
+</config>
